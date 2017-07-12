@@ -1,0 +1,43 @@
+import java.util.Random; //what is this thing called??
+
+
+// the die class simulates a six sided die
+public class Die 
+{
+	private int sides; // will hold the sides and number value for each roll
+	
+	private int value;
+
+
+//constructor to perform the inital roll of the die
+
+	public Die(int numSides)// has a parameter for the number of sides
+	{
+		sides = numSides;
+		
+		roll();
+	}
+	
+	// the roll method simulates the rolling of the die
+	
+	public void roll()
+	{
+		Random rand = new Random(); // random object
+		
+		value = rand.nextInt(sides) + 1; //generates a random value for the die
+	}
+	
+	//getSides method to return the number of sides for this die
+	
+	public int getSides()
+	{
+		return sides;
+	}
+	
+	//getValue method to retrun the value of the die
+	
+	public int getValue()
+	{
+		return value;
+	}
+}
