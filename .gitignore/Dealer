@@ -1,0 +1,69 @@
+
+public class Dealer 
+{
+
+	private int die1Value; //The value of die 1
+	private int die2Value; //Value of die 2
+	
+	/**
+	 * Constructor 
+	 */
+	public Dealer()
+	{
+		die1Value = 0;
+		die2Value = 0;
+	}
+	/**
+	 * The rollDice method rolls the dice 
+	 * and saves their values
+	 */
+	public void rollDice()
+	{
+		final int SIDES = 6; //Number of sides for dice
+		
+		//Create the two dice and roll them
+		Die die1= new Die(SIDES);
+		Die die2 = new Die(SIDES);//what am i doing wrong?
+		
+		//Record the values
+		die1Value = die1.getValue();
+		die2Value = die2.getValue();
+	}
+	
+	/**
+	 * The ChoOrHan method returns the resulf of 
+	 * the dice roll, Cho or Han.
+	 * @return either Cho (even) or Han (odd)
+	 */
+	
+	public String getChoOrHan()
+	{
+		String result; //To hold the result
+		
+		int sum = die1Value + die2Value; //sum of the dice
+		
+		if(sum  % 2 == 0)
+			result = "Cho (even)";
+		else 
+			result = "Han (odd)";
+		return result;
+	}
+	
+	/**
+	 * The getDie1Value method returns the value of die1.
+	 * @retrun the die1Value field
+	 */
+	
+	public int getDie1Value()
+	{
+		return die1Value;
+	}
+	
+	// returning the value of Die 2 in the die2Value field
+	
+	
+	public int getDie2Value()
+	{
+		return die2Value;
+	}
+}
